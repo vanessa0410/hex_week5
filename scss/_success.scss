@@ -1,0 +1,91 @@
+.content{
+    max-width: 940px;
+    height: 460px;
+    margin-top: 30px;
+    background-image: url("../pictures/success.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include pad(){
+        height: 496px;
+    }
+    img{
+        margin-top: 30px;
+        width: 190px;
+    }
+
+    .flowbox{
+        display:flex;
+        position: relative;
+        justify-content: space-between;
+        width: 190px;
+        @include pc1090(){
+            width: 90px;
+        }
+        @include pad(){
+            width: 400px;
+        }
+        @include mobile(){
+            width: 70%;
+        }
+    }
+    .flowbox::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left : 0;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        z-index: 0;
+        background-color: $main-color;
+    }
+    
+    .continue-box{
+        display: block;
+        width: 300px;
+        height: 65px;
+        text-align: center;
+        text-decoration: none;
+        color: $main-color;
+        font-size: 20px;
+        line-height: 65px;
+        margin-top: 30px;
+        background-color: #FFE180;
+        @include pc1090(){
+            width: 210px;
+        }
+        @include pad(){
+            display: none;
+        }
+    }
+    .check{
+        color: white;
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 999em;
+        background-color: $main-color;
+        z-index: 10;
+    }
+}
+
+
+.mobile-continue{
+    display: none;
+    @include pad(){
+        display: block;
+        height: 65px;
+        text-align: center;
+        text-decoration: none;
+        color: $main-color;
+        font-size: 20px;
+        line-height: 65px;
+        background-color: #FFE180;
+    }
+}
