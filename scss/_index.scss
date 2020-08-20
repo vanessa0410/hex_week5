@@ -1,0 +1,134 @@
+.banner {
+    margin-top: 30px;
+    height: 496px;
+    background-size: cover;
+    background-image: url('../pictures/banner.png');
+}
+
+.product{
+    display : flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    @include pad(){
+        flex-direction: column;
+    }
+}
+
+.product-menu{
+    width: 32%;
+    @include pad(){
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    a{
+        display: block;
+        color: $main-color;
+        font-size: 24px;
+        text-decoration: none;
+        text-align: center;
+        padding: 16px 0;
+    }
+    a:hover{
+        background-color: $sub-color;
+    }
+    .menu-header {
+        background-color: $main-color;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        padding: 16px 0;
+    }
+    li{
+        border: 1px solid $sub-color;
+    }
+}
+
+.product-list{
+    width : 67%;
+    display : flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include pad(){
+        width: 100%;
+    }
+    li{
+        width: 49%;
+        margin-bottom: 20px;
+        @include pad(){
+            width: 100%;
+        }
+    }
+    .product-pic{
+        position: relative;
+        img {
+            width: 100%;
+        }
+        p {
+            background-color: $main-color;
+            color: white;
+            writing-mode: vertical-lr;
+            letter-spacing: 4px;
+            font-size: 16px;
+            line-height: 20px;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+        a {
+            position: absolute;
+            top : 20px;
+            right: 20px;
+        }
+    }
+    .product-detail{
+        border: 1px solid $sub-color;
+        box-sizing: content-box;
+        display : flex;
+        color: $main-color;
+        font-size: 20px;
+        text-align: center;
+        padding: 14px;
+        .name{
+            width: 60%;
+        }
+        .price{
+            width: 40%;
+        }
+    }
+    .add-cart a{
+        display: block;
+        color: $main-color;
+        background-color: $sub-color;
+        padding: 16px 0;
+        text-align: center;
+        font-size: 24px;
+        text-decoration: none;
+    }
+    .add-cart a:hover{
+        color: $sub-color;
+        background-color: $main-color;
+    }
+}
+
+.page-control{
+    display : flex;
+    justify-content: flex-end;
+    margin: 10px 0;
+    a{
+        width: 60px;
+        height: 60px;
+        box-sizing: content-box;
+        border: 1px solid $sub-color;
+        font-size: 20px;
+        color: $main-color;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a:hover{
+        color: $sub-color;
+        background-color: $main-color;
+    }
+}
